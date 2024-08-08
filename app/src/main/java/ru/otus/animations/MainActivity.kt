@@ -1,8 +1,5 @@
 package ru.otus.animations
 
-import android.animation.PropertyValuesHolder
-import android.animation.ValueAnimator
-import android.view.View
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         circleBlue = findViewById(R.id.circle_blue)
         circlePink = findViewById(R.id.circle_pink)
+
         circle1 = findViewById(R.id.circle_1)
         circle2 = findViewById(R.id.circle_2)
         circle3 = findViewById(R.id.circle_3)
@@ -33,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         circle5 = findViewById(R.id.circle_5)
 
         circleBlue.setOnClickListener {
-            startTikTokLoadingAnimation(circleBlue, circlePink)
+            startTikTokLoadingAnimation(circlePink, circleBlue)
         }
 
         circle2.postDelayed({ circle2.secondTask() }, 400)
